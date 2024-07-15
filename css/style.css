@@ -1,0 +1,113 @@
+.header {
+  width: 100%;
+  height: 200px;
+  background-color: #0D0D0D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .header__logo {
+  width: 126px;
+  height: 48px;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  background-color: #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .input-new-task {
+  width: 86.6%;
+  margin-right: 8px;
+  height: 54px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: inset 1px;
+  background-color: #333333;
+  color: #808080;
+}
+.content .input-new-task:focus {
+  border-color: #5E60CE;
+  outline: none;
+}
+.content .new-task-btn {
+  display: flex;
+  width: 12.2%;
+  height: 54px;
+  border-radius: 8px;
+  border: 0;
+  background-color: #1E6F9F;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  color: #F2F2F2;
+  font-weight: 700;
+}
+.content .new-task-btn .new-task-img {
+  padding-left: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.container--first {
+  width: 100%;
+  max-width: 736px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 64px;
+  position: relative;
+  top: -30px;
+}
+
+.container--second {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 736px;
+  position: relative;
+  top: -30px;
+}
+.container--second .container-tasks-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.container--second .container-tasks-info .tasks-info--first {
+  color: #4EA8DE;
+}
+.container--second .container-tasks-info .tasks-info--second {
+  color: #8284FA;
+}
+.container--second .container__tasks {
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 24px;
+}
+.container--second .container__tasks .tasks-notes-img {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+}
+.container--second .container__tasks .tasks__text {
+  color: #808080;
+}
+
+.task-count {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 19px;
+  background-color: #333;
+  color: white;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}/*# sourceMappingURL=style.css.map */
