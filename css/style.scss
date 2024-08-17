@@ -1,4 +1,3 @@
-
 .header {
     width: 100%;
     height: 200px;
@@ -27,6 +26,9 @@
         box-shadow: inset 1px;
         background-color: #333333;
         color: #808080;
+        padding: 16px;
+        box-sizing: border-box;
+        font-size: 16px;
         &:focus {
             border-color: #5E60CE;
             outline: none;
@@ -35,7 +37,7 @@
     .new-task-btn {
         display: flex;
         width: 12.2%;
-        height: 54px;
+        height: 52px;
         border-radius: 8px;
         border: 0;
         background-color: #1E6F9F;
@@ -44,6 +46,11 @@
         justify-content: center;
         color: #F2F2F2;
         font-weight: 700;
+        box-sizing: border-box;
+        transition: background-color 0.5s ease;
+        &:hover {
+            background-color: #4EA8DE;
+        }
         .new-task-img {
             padding-left: 8px;
             width: 16px;
@@ -110,4 +117,115 @@
     border-radius: 999px;
     font-size: 12px;
     font-weight: 700;
+}
+
+.task {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 72px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    background-color: #262626;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px rgba($color: #000000, $alpha: 6%);
+}
+
+.task-some-text {
+    margin: 0;
+    color: #F2F2F2;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.check-box {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #4EA8DE;
+    border-radius: 50px;
+    margin-right: 15.27px;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, border-color 0.5s ease; /* Переход для фона и границы */
+
+    &:hover {
+        background-color: rgba(30, 111, 159, 0.2);
+    }
+    &:checked {
+        border: 0;
+        background-color: #5E60CE;
+    }
+    &:checked::after {
+        content: '';
+        position: absolute;
+        left: 7px;
+        top: 4px;
+        width: 3px;
+        height: 6px;
+        border: solid white;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+        transition: width 0.5s ease, height 0.5s ease; /* Переход для галочки */
+    }
+}
+
+.check-box:checked + .task-some-text{
+    text-decoration: line-through;
+    color: #808080;
+}
+
+.button__delete {
+    margin-left: auto;
+    position: relative;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #262626;
+    border-radius: 4px;
+}
+
+.button__delete:hover {
+    background-color: #333333;
+}
+
+.button__delete::before {
+    content: "";
+    display: block;
+    width: 12.48px;
+    height: 14px;
+    background: url(../images/garbage.svg) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: filter 0s;
+}
+
+.button__delete:hover::before {
+    background: url(../images/garbage-red.svg) no-repeat center;
+    background-size: contain;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.pagination__item {
+    padding: 8px;
+    margin: 8px;
+    cursor: pointer;
+    color: #F2F2F2;
 }
